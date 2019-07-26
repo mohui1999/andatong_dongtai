@@ -1,0 +1,109 @@
+
+.dontai-container{
+  width: 100%;
+  height: 100%;
+  padding-top: 10rpx;
+  background-color: #ebebebe3;
+}
+
+
+/**单个动态框框**/
+.dongtai-item{
+  
+  width: 90%;
+  height: auto;
+  margin: 20rpx 40rpx 20rpx 40rpx;
+  border-radius: 15rpx;
+  background-color: #ffffff;
+}
+
+/**帖子头部，包括用户头像，用户名，时间**/
+.dongtai-item-head{
+  display: flex;
+}
+
+/**用户头像**/
+.dongtai-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  border-radius: 10rpx;
+}
+
+/**flex设置用户名，时间**/
+.dongtai-item-head-right{
+  margin-top: 10rpx;
+}
+
+/**用户名**/
+.dongtai-userName{
+  font-size: 35rpx;
+  color: #313131;
+  font-weight: 700;
+  letter-spacing: 10rpx;
+  margin-top: 10rpx;
+}
+
+/**发送时间**/
+.dongtai-sendTime{
+  font-size: 23rpx;
+  color: #4e4a4a;
+  margin-top: 10rpx;
+}
+
+/**动态内容**/
+.dongtai-content{
+  font-size: 30rpx;
+  letter-spacing: 7rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  line-height: 40rpx;
+}
+
+/**图像的外框**/
+.dongtai-imageCon{
+  height: 400rpx;
+}
+
+/**图像**/
+.dongtai-image{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+
+/**动态最底部，包括点赞评论**/
+.dongtai-bottom{
+  display: flex;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  align-items: center;
+}
+
+/**动态最底部flex左边空白占5**/
+.dongtai-bottom-left{
+  flex: 5;
+}
+
+/**赞数**/
+.dongtai-likeNum{
+  flex: 1;
+  margin-left: 10rpx;
+}
+
+/**评论数**/
+.dongtai-comNum{
+  flex: 1;
+  margin-left: 10rpx;
+}
+
+/**点赞**/
+.dongtai-like{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+/**评论数**/
+.dongtai-comment{
+  height: 40rpx;
+  width: 40rpx;
+}
+

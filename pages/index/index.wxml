@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="dontai-container">
+
+  <view class='dongtai-item'>
+    <!--最上面包括头像，用户名，时间的部分-->
+    <view class="dongtai-item-head">
+      <!--头像-->
+      <image class='dongtai-avatar' src="https://www.lzzzzl.top/media/user_avatar/20170084.gif"></image>
+      <view class='dongtai-item-head-right'>
+        <!--用户名-->
+        <view class='dongtai-userName'>夏一</view>
+        <!--发送时间-->
+        <view class='dongtai-sendTime'>今天 09:08</view>
+        </view>
+    </view>
+
+    <!--动态内容-->
+    <view class='dongtai-content'>2015--2019四年的等待终于遇见你JJ四年的等待终于遇见你JJ四年的等待终于遇见你JJ</view>
+    <view class="dongtai-imageCon">
+      <!--动态图片 判定图片内容是否为空-->
+      <image class='dongtai-image' mode='aspectFit' style="height: 400rpx; " src="https://www.lzzzzl.top/media/action_img/20170084_1564015087.4348357.gif"></image>
+    </view>
+
+    <!--最下面部分，包括点赞评论-->
+    <view class="dongtai-bottom">
+      <view class="dongtai-bottom-left"></view>
+      <!--动态点赞-->
+      <image class='dongtai-like' src="/img/heart.png"></image>
+      <view class="dongtai-likeNum">10</view>
+      <!--动态评论-->
+      <image class='dongtai-comment' src='/img/comment.png'></image>
+      <view class="dongtai-comNum">9</view>
+    </view>
+  </view>
+
+  <view class='dongtai-item'>
+    <!--最上面包括头像，用户名，时间的部分-->
+    <view class="dongtai-item-head">
+      <!--头像-->
+      <image class='dongtai-avatar' src="https://www.lzzzzl.top/media/user_avatar/20170084.gif"></image>
+      <view class='dongtai-item-head-right'>
+        <!--用户名-->
+        <view class='dongtai-userName'>夏一</view>
+        <!--发送时间-->
+        <view class='dongtai-sendTime'>今天 09:08</view>
+        </view>
+    </view>
+
+    <!--动态内容-->
+    <view class='dongtai-content'>2015--2019四年的等待终于遇见你JJ四年的等待终于遇见你JJ四年的等待终于遇见你JJ</view>
+    <view class="dongtai-imageCon">
+      <!--动态图片 判定图片内容是否为空-->
+      <image class='dongtai-image' mode='aspectFit' style="height: 400rpx; " src="https://www.lzzzzl.top/media/action_img/20170084_1564015087.4348357.gif"></image>
+    </view>
+
+    <!--最下面部分，包括点赞评论-->
+    <view class="dongtai-bottom">
+      <view class="dongtai-bottom-left"></view>
+      <!--动态点赞-->
+      <image class='dongtai-like' src="/img/heart.png"></image>
+      <view class="dongtai-likeNum">10</view>
+      <!--动态评论-->
+      <image class='dongtai-comment' src='/img/comment.png'></image>
+      <view class="dongtai-comNum">9</view>
+    </view>
+  </view>
+  
+</view>
