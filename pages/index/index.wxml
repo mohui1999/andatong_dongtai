@@ -1,9 +1,9 @@
 <!--index.wxml-->
 <view class="dontai-container">
 
-  <view class='dongtai-item' wx:for="{{dongtai_list}}" wx:key="action_id" data-index="index"  id="{{item.action_id}}">
+  <view class='dongtai-item' wx:for="{{dongtai_list}}" wx:key="action_id" data-index="index">
     <!--最上面包括头像，用户名，时间的部分-->
-    <view class="dongtai-item-head">
+    <view class="dongtai-item-head" bindtap="toPerPage" data-authorid="{{item.author_id}}">
       <!--头像-->
       <image class='dongtai-avatar' src="{{item.author_avatar}}"></image>
       <view class='dongtai-item-head-right'>
@@ -15,7 +15,7 @@
     </view>
 
     <!--动态内容-->
-    <view class='dongtai-content' bindtap="toDetails">{{item.excerpt}}</view>
+    <view class='dongtai-content' bindtap="toDetails" data-actionid="{{item.action_id}}">{{item.excerpt}}</view>
     <view class="dongtai-imageCon" wx:if="{{item.img}}">
       <!--动态图片 判定图片内容是否为空-->
       <image class='dongtai-image' mode='aspectFit' style="height: 400rpx; width: 620rpx;" src="{{item.img}}"></image>
@@ -26,10 +26,10 @@
       <view class="dongtai-bottom-left"></view>
       <!--动态点赞-->
       <image class='dongtai-like' src="/img/heart.png"></image>
-      <view class="dongtai-likeNum">10</view>
+      <view class="dongtai-likeNum">{{item.like_num}}</view>
       <!--动态评论-->
-      <image class='dongtai-comment' bindtap="toDetails" src='/img/comment.png'></image>
-      <view class="dongtai-comNum">{{item.commit_count}}</view>
+      <image class='dongtai-comment' bindtap="toDetails" data-actionid="{{item.action_id}}" src='/img/comment.png'></image>
+      <view class="dongtai-comNum" bindtap="toDetails" data-actionid="{{item.action_id}}">{{item.commit_count}}</view>
     </view>
   </view>
   

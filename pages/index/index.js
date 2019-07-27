@@ -73,16 +73,24 @@ Page({
     that.loadingDTlist();
   },
 
-  /*用户点击信件跳转到详情页的函数*/
+  /*用户点击跳转到详情页的函数*/
   toDetails: function (e) {
-    var id = e.currentTarget.action_id; //获取当前信件ID
+    var id = e.currentTarget.dataset.actionid; //获取当前动态ID
     console.log(id);
     wx.navigateTo({
       //实现跳转的函数，url附带跳转时传送的数据
       url: '/pages/dongtai_detail/dongtai_detail?id=' + id,
-    })
+    }) 
+  },
 
-     
+  /*用户点击跳转到用户个人主页的函数*/
+  toPerPage: function (e) {
+    var id = e.currentTarget.dataset.authorid; //获取当前用户ID
+    console.log(id);
+    wx.navigateTo({
+      //实现跳转的函数，url附带跳转时传送的数据
+      url: '/pages/personal_page/personal_page?id=' + id,
+    })
   },
 
 

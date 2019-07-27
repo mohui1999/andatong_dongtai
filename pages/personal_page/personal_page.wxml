@@ -1,2 +1,51 @@
 <!--pages/personal_page/personal_page.wxml-->
-<text>pages/personal_page/personal_page.wxml</text>
+<view class="perPage-container">
+  <!--顶部底图头像和名字-->
+  <view class="perPage-header">
+    <view class="perPage-user">
+      <image class="perPage-avatar" src="{{perPage_detail.author_avatar}}"></image>
+      <view class="perPage-name">{{perPage_detail.author_name}}</view>
+    </view>
+    <image class="perPage-topImg" mode='aspectFill' style="width: 100%; height: 350rpx" src="{{perPage_detail.author_avatar}}"></image>
+  </view>
+
+  <view class="perPage-header-bottom"></view>
+  
+  <view class="perPage-dongtai">
+      <view class='dongtai-item' wx:for="{{perPage_detail.context_list}}" wx:key="action_id" data-index="index"  id="{{item.action_id}}">
+      <!--最上面包括头像，用户名，时间的部分-->
+      <view class="dongtai-item-head">
+        <!--头像-->
+        <image class='dongtai-avatar' src="{{item.author_avatar}}"></image>
+        <view class='dongtai-item-head-right'>
+          <!--用户名-->
+          <view class='dongtai-userName'>{{item.author_name}}</view>
+          <!--发送时间-->
+          <view class='dongtai-sendTime'>{{item.time}}</view>
+          </view>
+      </view>
+
+      <!--动态内容-->
+      <view class='dongtai-content' bindtap="toDetails" data-actionid="{{item.action_id}}">{{item.excerpt}}</view>
+      <view class="dongtai-imageCon" wx:if="{{item.img}}">
+        <!--动态图片 判定图片内容是否为空-->
+        <image class='dongtai-image' mode='aspectFit' style="height: 400rpx; width: 620rpx;" src="{{item.img}}"></image>
+      </view>
+
+      <!--最下面部分，包括点赞评论-->
+      <view class="dongtai-bottom">
+        <view class="dongtai-bottom-left"></view>
+        <!--动态点赞-->
+        <image class='dongtai-like' src="/img/heart.png"></image>
+        <view class="dongtai-likeNum">{{item.like_num}}</view>
+        <!--动态评论-->
+        <image class='dongtai-comment' bindtap="toDetails" data-actionid="{{item.action_id}}" src='/img/comment.png'></image>
+        <view class="dongtai-comNum" bindtap="toDetails" data-actionid="{{item.action_id}}">{{item.commit_count}}</view>
+      </view>
+    </view>
+  
+  
+  </view>
+
+
+</view>
