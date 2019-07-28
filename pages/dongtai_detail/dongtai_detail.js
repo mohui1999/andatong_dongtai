@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    dongtai_detail: [],
+    item: 1,
+    tab: 1
 
   },
 
@@ -12,7 +15,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.request({
+      //调用接口获得个人主页的详细内容
+      url: 'https://lzzzzl.top/comment_action?action_id=' + options.id,
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res);
+        that.setData({
+          dongtai_detail: res.data,
+        })
+      }
+    })
+  },
 
+  // 页面切换
+  changeItem: function (e) {
+    this.setData({
+      item: e.target.dataset.item,
+    })
+  },
+  // tab切换
+  changeTab: function (e) {
+    this.setData({
+      tab: e.detail.current
+    })
   },
 
   /**

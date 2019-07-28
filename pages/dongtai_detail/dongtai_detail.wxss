@@ -1,1 +1,164 @@
 /* pages/dongtai_detail/dongtai_detail.wxss */
+
+.DtDetail-container{
+  height: 100%;
+  width: 100%;
+  padding-top: 10rpx;
+  background-color: #ece8e8;
+}
+
+/**单个动态框框**/
+.dongtai-item{
+  
+  width: 90%;
+  height: auto;
+  margin: 20rpx 40rpx 20rpx 40rpx;
+  border-radius: 15rpx;
+  padding-bottom: 10rpx;
+  background-color: #ffffff;
+}
+
+/**帖子头部，包括用户头像，用户名，时间**/
+.dongtai-item-head{
+  display: flex;
+}
+
+/**用户头像**/
+.dongtai-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 20rpx 10rpx 20rpx;
+  border-radius: 10rpx;
+}
+
+/**flex设置用户名，时间**/
+.dongtai-item-head-right{
+  margin-top: 20rpx;
+}
+
+/**用户名**/
+.dongtai-userName{
+  font-size: 35rpx;
+  color: #313131;
+  font-weight: 700;
+  letter-spacing: 6rpx;
+  margin-top: 10rpx;
+}
+
+/**发送时间**/
+.dongtai-sendTime{
+  font-size: 23rpx;
+  color: #4e4a4a;
+  margin-top: 10rpx;
+}
+
+/**动态内容**/
+.dongtai-content{
+  font-size: 30rpx;
+  letter-spacing: 7rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  line-height: 40rpx;
+  word-break:break-all;
+}
+
+/**图像的外框**/
+.dongtai-imageCon{
+  height: 400rpx;
+}
+
+/**图像**/
+.dongtai-image{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+
+/**动态最底部，包括点赞评论**/
+.dongtai-bottom{
+  display: flex;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  align-items: center;
+}
+
+/**动态最底部flex左边空白占5**/
+.dongtai-bottom-left{
+  flex: 5;
+}
+
+/**赞数**/
+.dongtai-likeNum{
+  flex: 1;
+  margin-left: 10rpx;
+}
+
+/**评论数**/
+.dongtai-comNum{
+  flex: 1;
+  margin-left: 10rpx;
+}
+
+/**点赞**/
+.dongtai-like{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+/**评论数**/
+.dongtai-comment{
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.DtDetail-foot-tab{
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: 20rpx 40rpx 20rpx 40rpx;
+  align-items: center;
+  border-radius: 15rpx;
+  padding-top: 10rpx;
+  background-color: #ffffff;
+
+}
+
+.DtDetail-like-tab{
+  flex: 1;
+  display: flex;
+}
+
+.DtDetail-comment-tab{
+  flex: 1;
+  display: flex;
+}
+
+.DtDetail-like{
+  height: 50rpx;
+  margin-left: 100rpx;
+  padding-bottom: 5rpx;
+}
+
+.DtDetail-comment{
+  height: 50rpx;
+  margin-left: 100rpx;
+  padding-bottom: 5rpx;
+}
+
+.DtDetail-likeNum{
+  margin-left: 10rpx;
+  padding-bottom: 5rpx;
+}
+
+.DtDetail-comNum{
+  margin-left: 10rpx;
+  padding-bottom: 5rpx;
+}
+
+.tab-item{
+  border: 1px solid #ffffff;
+}
+
+.tab-item.active {
+  color: #c25b5b;
+  border-bottom-color: #c25b5b;
+}
+
