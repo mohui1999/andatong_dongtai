@@ -1,0 +1,17 @@
+<!--pages/dongtai_create/dongtai_create.wxml-->
+<view class='page'>
+  <textarea class='moment-text' bindinput="input" placeholder="开学季，快分享你的新发现……" maxlength="140" />
+
+  <view class="image_content">
+    <view class='moment-bottom-con'>
+      <image bindtap="chooseimage" class="moment-img-button" src='/img/image.png'></image>
+      <view bindtap="chooseimage" class="moment-bottom-text">选择图片</view>
+      <view class="moment-middle"></view>
+      <image bindtap="send" class="moment-send-button" src='/img/send.png'></image>
+      <view bindtap="send" class="moment-bottom-text">发送动态</view>
+    </view>
+    <view class='image' wx:for="{{img_url}}">
+      <image class="moment_img" src="{{item}}"></image>
+    </view>
+  </view>
+</view>

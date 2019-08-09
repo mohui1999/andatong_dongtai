@@ -1,0 +1,69 @@
+/* pages/dongtai_create/dongtai_create.wxss */
+
+.page {
+  padding: 20rpx;
+}
+
+.moment-text {
+  height: 600rpx;
+  width: 650rpx;
+  margin: 20rpx;
+  font-size: 30rpx;
+  padding: 10px;
+  border-radius: 12rpx;
+  border: 1px solid #36ade4;
+}
+
+.image {
+  width: 31%;
+  height: 100px;
+  padding: 2px;
+}
+
+.moment_img {
+  width: 50px;
+  height: 50px;
+}
+
+.moment-bottom-con {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 60rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.moment-img-button {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 10rpx;
+}
+
+.moment-send-button {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+
+.moment-bottom-text{
+  flex: 1;
+  color: #1296db;
+  font-size: 35rpx;
+  letter-spacing: 9rpx;
+  margin-top: 5rpx;
+  margin-left: 2rpx;
+}
+
+.moment-middle{
+  flex: 1;
+}
+
+.image_content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}

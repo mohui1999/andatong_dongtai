@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/personal_page/personal_page",
-    "pages/dongtai_detail/dongtai_detail"
+    "pages/dongtai_detail/dongtai_detail",
+    "pages/dongtai_create/dongtai_create"
   ],
   "window": {
     "backgroundTextStyle": "light",

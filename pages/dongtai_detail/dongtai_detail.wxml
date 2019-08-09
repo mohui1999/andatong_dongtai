@@ -1,59 +1,85 @@
 <!--pages/dongtai_detail/dongtai_detail.wxml-->
 <view class="DtDetail-container">
   <view class='dongtai-item'>
-      <!--最上面包括头像，用户名，时间的部分-->
-      <view class="dongtai-item-head">
-        <!--头像-->
-        <image class='dongtai-avatar' src="{{dongtai_detail.action_author_avatar}}"></image>
-        <view class='dongtai-item-head-right'>
-          <!--用户名-->
-          <view class='dongtai-userName'>{{dongtai_detail.action_author}}</view>
-          <!--发送时间-->
-          <view class='dongtai-sendTime'>{{dongtai_detail.time}}</view>
-          </view>
-      </view>
-
-      <!--动态内容-->
-      <view class='dongtai-content'>{{dongtai_detail.action_excerpt}}</view>
-      <view class="dongtai-imageCon" wx:if="{{dongtai_detail.img}}">
-        <!--动态图片 判定图片内容是否为空-->
-        <image class='dongtai-image' mode='aspectFit' style="height: 400rpx; width: 620rpx;" src="{{dongtai_detail.img}}"></image>
-  </view>
-
-      <!--最下面部分，包括点赞评论-->
-      <view class="dongtai-bottom">
-        <view class="dongtai-bottom-left"></view>
-        <!--动态点赞-->
-        <image class='dongtai-like' src="/img/heart.png"></image>
-        <view class="dongtai-likeNum">{{dongtai_detail.like_num}}</view>
-        <!--动态评论-->
-        <image class='dongtai-comment' src='/img/comment.png'></image>
-        <view class="dongtai-comNum">{{dongtai_detail.commit_count}}</view>
+    <!--最上面包括头像，用户名，时间的部分-->
+    <view class="dongtai-item-head">
+      <!--头像-->
+      <image class='dongtai-avatar' src="{{dongtai_detail.action_author_avatar}}"></image>
+      <view class='dongtai-item-head-right'>
+        <!--用户名-->
+        <view class='dongtai-userName'>{{dongtai_detail.action_author}}</view>
+        <!--发送时间-->
+        <view class='dongtai-sendTime'>{{dongtai_detail.time}}</view>
       </view>
     </view>
+
+    <!--动态内容-->
+    <view class='dongtai-content'>{{dongtai_detail.action_excerpt}}</view>
+    <view class="dongtai-imageCon" wx:if="{{dongtai_detail.img}}">
+      <!--动态图片 判定图片内容是否为空-->
+      <image class='dongtai-image' mode='aspectFit' style="height: 400rpx; width: 620rpx;" src="{{dongtai_detail.img}}"></image>
+    </view>
+
+    <!--上面的点赞评论-->
+    <view class="dongtai-bottom">
+      <view class="dongtai-bottom-left"></view>
+      <!--动态点赞-->
+      <image class='dongtai-like' src="/img/heart.png"></image>
+      <view class="dongtai-likeNum">{{dongtai_detail.like_num}}</view>
+      <!--动态评论-->
+      <image class='dongtai-comment' src='/img/comment.png'></image>
+      <view class="dongtai-comNum">{{dongtai_detail.commit_count}}</view>
+    </view>
+  </view>
+
 
   <view class="DtDetail-foot-tab">
     <view class="DtDetail-like-tab tab-item {{tab==0?'active':''}}" bindtap="changeItem" data-item="0">
-        <view class='DtDetail-like' bindtap="changeItem" data-item="0">喜欢</view>
-        <view class="DtDetail-likeNum" bindtap="changeItem" data-item="0" >{{dongtai_detail.like_num}}</view>
+      <view class='DtDetail-like' bindtap="changeItem" data-item="0">喜欢</view>
+      <view class="DtDetail-likeNum" bindtap="changeItem" data-item="0">{{dongtai_detail.like_num}}</view>
     </view>
     <view class="DtDetail-comment-tab tab-item {{tab==1?'active':''}}" bindtap="changeItem" data-item="1">
-        <view class='DtDetail-comment' bindtap="changeItem" data-item="1" >评论</view>
-        <view class="DtDetail-commNum" bindtap="changeItem" data-item="1" >4</view>
+      <view class='DtDetail-comment' bindtap="changeItem" data-item="1">评论</view>
+      <view class="DtDetail-comNum" bindtap="changeItem" data-item="1">4</view>
     </view>
   </view>
 
   <view class="DtDetail-foot-content">
-  <swiper current="{{item}}" bindchange="changeTab">
-    <swiper-item>
-      喜欢
-    </swiper-item>
+    <swiper class="DtDetail-swiper" current="{{item}}" bindchange="changeTab">
+      <swiper-item>
+        <view class="like-content">
+          <view class="like-item">喜欢,待添加</view>
+          <view class="like-item">喜欢,待添加</view>
+        </view>
+      </swiper-item>
 
-    <swiper-item>
-      评论
-    </swiper-item>
+      <!--评论部分-->
+      <swiper-item>
+        <view class="comment-container">
+          <view class="comment-item" wx:for="{{dongtai_detail.context_list}}" wx:key="commit_id" data-index="index">
 
-  </swiper>
-</view>
+            <view class="comment-head">
+              <view class="comment-left">
+                <image class="comment-avatar" src="{{item.author_avatar}}"></image>
+                <view class="comment-middle">
+                  <view class="comment-name">{{item.author_name}}</view>
+                  <view class="comment-time">{{item.time}}</view>
+                </view>
+              </view>
+              <view class="comment-right">
+                <view class="comment-like-left"></view>
+                <image class="comment-like" src="/img/heart.png"></image>
+                <view class="comment-likeNum">{{item.like_num}}</view>
+              </view>
+            </view>
+            <view class="comment-content">{{item.commit_content}}</view>
+
+          </view>
+        </view>
+
+      </swiper-item>
+
+    </swiper>
+  </view>
 
 </view>

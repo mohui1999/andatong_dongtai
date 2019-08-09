@@ -25,8 +25,9 @@
     <view class="dongtai-bottom">
       <view class="dongtai-bottom-left"></view>
       <!--动态点赞-->
-      <image class='dongtai-like' src="/img/heart.png"></image>
-      <view class="dongtai-likeNum">{{item.like_num}}</view>
+      <image class='dongtai-like' bindtap="likeNum" data-actionid="{{item.action_id}}" data-index="{{index}}" src="/img/heart.png"></image>
+      
+      <view class="dongtai-likeNum" bindtap="likeNum" data-actionid="{{item.action_id}}" data-index="{{index}}">{{item.like_num}}</view>
       <!--动态评论-->
       <image class='dongtai-comment' bindtap="toDetails" data-actionid="{{item.action_id}}" src='/img/comment.png'></image>
       <view class="dongtai-comNum" bindtap="toDetails" data-actionid="{{item.action_id}}">{{item.commit_count}}</view>
@@ -34,3 +35,9 @@
   </view>
   
 </view>
+<view class="dongtai-edit-container">
+  <view class="dongtai-edit-but">
+    <image class="dongtai-edit" src="/img/edit.png" bindtap="toCreatDT"></image>
+  </view>
+</view>
+

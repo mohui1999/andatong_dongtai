@@ -1,17 +1,20 @@
 /* pages/dongtai_detail/dongtai_detail.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  background-image: url(http://xiemenglei.cn/wp-content/uploads/2019/07/dongtai_bg.jpg);
+}
 
+/**动态的容器**/
 .DtDetail-container{
-  height: 100%;
   width: 100%;
   padding-top: 10rpx;
-  background-color: #ece8e8;
 }
 
 /**单个动态框框**/
 .dongtai-item{
-  
   width: 90%;
-  height: auto;
   margin: 20rpx 40rpx 20rpx 40rpx;
   border-radius: 15rpx;
   padding-bottom: 10rpx;
@@ -89,31 +92,35 @@
 .dongtai-likeNum{
   flex: 1;
   margin-left: 10rpx;
+  font-size: 30rpx;
 }
 
 /**评论数**/
 .dongtai-comNum{
   flex: 1;
   margin-left: 10rpx;
+  font-size: 30rpx;
 }
 
 /**点赞**/
 .dongtai-like{
   height: 40rpx;
   width: 40rpx;
+  
 }
 
-/**评论数**/
+/**评论**/
 .dongtai-comment{
   height: 40rpx;
   width: 40rpx;
 }
 
+/**实现喜欢与评论的tab**/
 .DtDetail-foot-tab{
   display: flex;
   width: 90%;
   height: auto;
-  margin: 20rpx 40rpx 20rpx 40rpx;
+  margin: 20rpx 40rpx 3rpx 40rpx;
   align-items: center;
   border-radius: 15rpx;
   padding-top: 10rpx;
@@ -121,44 +128,172 @@
 
 }
 
+/**切换的喜欢tab**/
 .DtDetail-like-tab{
   flex: 1;
   display: flex;
 }
 
+/**切换的评论tab**/
 .DtDetail-comment-tab{
   flex: 1;
   display: flex;
 }
 
+/**喜欢tab文字**/
 .DtDetail-like{
   height: 50rpx;
+  font-size: 30rpx;
   margin-left: 100rpx;
   padding-bottom: 5rpx;
 }
 
+/**评论tab文字**/
 .DtDetail-comment{
   height: 50rpx;
+  font-size: 30rpx;
   margin-left: 100rpx;
   padding-bottom: 5rpx;
 }
 
+/**喜欢tab数**/
 .DtDetail-likeNum{
   margin-left: 10rpx;
+  font-size: 30rpx;
   padding-bottom: 5rpx;
 }
 
+/**评论tab数**/
 .DtDetail-comNum{
   margin-left: 10rpx;
+  font-size: 30rpx;
   padding-bottom: 5rpx;
 }
 
+/**tab属性设置**/
 .tab-item{
   border: 1px solid #ffffff;
 }
 
+/**tab处于选中时的状态**/
 .tab-item.active {
   color: #c25b5b;
   border-bottom-color: #c25b5b;
+}
+
+/**最下方的内容（喜欢，评论）**/
+.DtDetail-foot-content{
+  flex: 1;
+  height: 100%;
+}
+
+/**最下方swiper组件的设置**/
+.DtDetail-foot-content > swiper {
+  height: 100%;
+}
+
+/**
+
+点赞详情部分
+
+**/
+
+
+
+/**
+评论详情部分
+**/
+.comment-container{
+  width: 100%;
+}
+
+/**单个评论框**/
+.comment-item{
+  width: 90%;
+  margin: 4rpx 40rpx 4rpx 40rpx;
+  background-color: #ffffff;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  border-radius: 15rpx;
+}
+
+/**评论框头部，头像用户名时间点赞**/
+.comment-head{
+  display: flex;
+}
+
+/**
+评论头部flex设置头像用户名，时间，点赞
+**/
+
+/**头像**/
+.comment-left{
+  display: flex;
+  flex: 2;
+}
+
+/**评论flex设置用户名，时间**/
+.comment-middle{
+  margin-top: 10rpx;
+}
+
+/**设置点赞flex**/
+.comment-right{
+  display: flex;
+  flex: 1;
+}
+
+
+/**评论用户头像**/
+.comment-avatar{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 20rpx 20rpx 10rpx 20rpx;
+   display: block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/**评论用户名**/
+.comment-name{
+  font-size: 35rpx;
+  color: #313131;
+  font-weight: 400;
+  letter-spacing: 6rpx;
+  margin-top: 10rpx;
+}
+
+/**评论发送时间**/
+.comment-time{
+  font-size: 23rpx;
+  color: #4e4a4a;
+  margin-top: 10rpx;
+}
+
+.comment-like-left{
+  flex: 2;
+}
+
+/**评论点赞**/
+.comment-like{
+  height: 40rpx;
+  width: 40rpx;
+  margin-top: 45rpx;
+}
+
+/**评论点赞数**/
+.comment-likeNum{
+  flex: 1;
+  font-size: 30rpx;
+  margin-top: 45rpx;
+}
+
+/**评论内容**/
+.comment-content{
+  font-size: 30rpx;
+  letter-spacing: 7rpx;
+  margin: 10rpx 20rpx 10rpx 20rpx;
+  line-height: 40rpx;
+  word-break:break-all;
 }
 
